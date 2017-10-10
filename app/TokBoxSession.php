@@ -27,7 +27,7 @@ class TokBoxSession extends Model
 
     public function sessionId()
     {
-        return $this->tok_box_session_id;
+        return $this->value;
     }
 
     public function tokens()
