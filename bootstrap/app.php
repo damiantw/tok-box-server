@@ -1,7 +1,5 @@
 <?php
 
-use Laravel\Lumen\Routing\Router;
-
 require_once __DIR__.'/../vendor/autoload.php';
 
 try {
@@ -26,9 +24,17 @@ $app->singleton(
     App\Console\Kernel::class
 );
 
+$app->configure('cors');
+
+$app->register(Barryvdh\Cors\ServiceProvider::class);
+
+$app->middleware([
+    \Barryvdh\Cors\HandleCors::class,
+]);
+
 $app->register(App\Providers\AppServiceProvider::class);
 
-$app->router->group(['namespace' => 'App\Http\Controllers'], function (Router $router) {
+$app->router->group(['namespace' => 'App\Http\Controllers'], function (Laravel\Lumen\Routing\Router $router) {
 
     $router->get('tok-box-session', 'TokBoxSessionController@index');
 
