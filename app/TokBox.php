@@ -24,9 +24,9 @@ class TokBox
             $query->where('expires_at', '<=', Carbon::now())
                 ->whereHas('connections', function (Builder $query) {
 
-                    $query->where('destroyed', '=', false)
+                    $query->where('destroyed', '=', 0)
                         ->whereHas('streams', function (Builder $query) {
-                            $query->where('destroyed', '=', false);
+                            $query->where('destroyed', '=', 0);
                         });
 
                 });
