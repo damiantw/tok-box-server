@@ -30,13 +30,13 @@ $app->register(App\Providers\AppServiceProvider::class);
 
 $app->router->group(['namespace' => 'App\Http\Controllers'], function (Router $router) {
 
-    $router->get('tok-box-session', \App\Http\Controllers\TokBoxSessionController::class.'@index');
+    $router->get('/tok-box-session', \App\Http\Controllers\TokBoxSessionController::class.'@index');
 
-    $router->post('tok-box-session', \App\Http\Controllers\TokBoxSessionController::class.'@store');
+    $router->post('/tok-box-session', \App\Http\Controllers\TokBoxSessionController::class.'@store');
 
-    $router->post('guide-tok-box-token/{sessionId}', \App\Http\Controllers\GuideTokBoxTokenController::class.'@store');
+    $router->post('/guide-tok-box-token/{sessionId}', \App\Http\Controllers\GuideTokBoxTokenController::class.'@store');
 
-    $router->post('customer-tok-box-token/{sessionId}', \App\Http\Controllers\CustomerTokBoxTokenController::class.'@store');
+    $router->post('/customer-tok-box-token/{sessionId}', \App\Http\Controllers\CustomerTokBoxTokenController::class.'@store');
 
 });
 
