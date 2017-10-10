@@ -19,7 +19,7 @@ class TokBox
 
     public function getAvailableSessions()
     {
-        return TokBoxSession::query()->whereHas('tokens', function (Builder $query) {
+        $query = TokBoxSession::query()->whereHas('tokens', function (Builder $query) {
 
             $query->where('expires_at', '<=', Carbon::now())
                 ->whereHas('connections', function (Builder $query) {
@@ -31,7 +31,9 @@ class TokBox
 
                 });
 
-        })->get();
+        });
+
+        dd($query->toSql());
     }
 
     public function createSession(string  $sessionName)
