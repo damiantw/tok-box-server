@@ -9,11 +9,9 @@ use Laravel\Lumen\Routing\Controller;
 
 class TokBoxSessionController extends Controller
 {
-    public function index()
+    public function index(TokBox $tokBox)
     {
-        return response()->json(TokBoxSession::query()->with(['tokens' => function($query) {
-            $query->unexpired();
-        }])->get());
+        return response()->json($tokBox->getAvailableSessions());
     }
 
     public function store(TokBox $tokBox, Request $request)

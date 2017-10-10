@@ -1,0 +1,36 @@
+[2017-10-10 19:11:24] lumen.ERROR: Symfony\Component\Console\Exception\RuntimeException: The "--class" option does not exist. in /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Input/ArgvInput.php:222
+Stack trace:
+#0 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Input/ArgvInput.php(156): Symfony\Component\Console\Input\ArgvInput->addLongOption('class', 'tok_box_streams')
+#1 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Input/ArgvInput.php(82): Symfony\Component\Console\Input\ArgvInput->parseLongOption('--class=tok_box...')
+#2 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Input/Input.php(61): Symfony\Component\Console\Input\ArgvInput->parse()
+#3 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Command/Command.php(220): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#4 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/illuminate/console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#5 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Application.php(888): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Application.php(224): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateMakeCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Application.php(125): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/illuminate/console/Application.php(88): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/laravel/lumen-framework/src/Console/Kernel.php(84): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/damian/PhpstormProjects/vmt-tok-poc/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
+[2017-10-10 20:07:16] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '}' in /home/damian/PhpstormProjects/vmt-tok-poc/app/TokBox.php:24
+Stack trace:
+#0 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/composer/ClassLoader.php(301): Composer\Autoload\includeFile('/home/damian/Ph...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\TokBox')
+#2 [internal function]: spl_autoload_call('App\\TokBox')
+#3 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/barryvdh/laravel-ide-helper/src/Console/ModelsCommand.php(179): class_exists('App\\TokBox')
+#4 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/barryvdh/laravel-ide-helper/src/Console/ModelsCommand.php(101): Barryvdh\LaravelIdeHelper\Console\ModelsCommand->generateDocs(Array, Array)
+#5 [internal function]: Barryvdh\LaravelIdeHelper\Console\ModelsCommand->handle()
+#6 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/illuminate/container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#8 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#9 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/illuminate/container/Container.php(549): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#10 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/illuminate/console/Command.php(180): Illuminate\Container\Container->call(Array)
+#11 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Command/Command.php(262): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/illuminate/console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#13 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Application.php(888): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Application.php(224): Symfony\Component\Console\Application->doRunCommand(Object(Barryvdh\LaravelIdeHelper\Console\ModelsCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/symfony/console/Application.php(125): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/illuminate/console/Application.php(88): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /home/damian/PhpstormProjects/vmt-tok-poc/vendor/laravel/lumen-framework/src/Console/Kernel.php(84): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /home/damian/PhpstormProjects/vmt-tok-poc/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 {main}  

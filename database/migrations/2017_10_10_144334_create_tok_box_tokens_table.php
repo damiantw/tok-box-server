@@ -17,8 +17,10 @@ class CreateTokBoxTokensTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('tok_box_session_id');
             $table->string('value', 1024);
+            $table->string('data');
             $table->enum('role', [\OpenTok\Role::PUBLISHER, \OpenTok\Role::SUBSCRIBER, \OpenTok\Role::MODERATOR]);
             $table->dateTime('expires_at');
+            $table->index('data');
             $table->timestamps();
         });
     }
