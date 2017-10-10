@@ -16,6 +16,8 @@ $app->withEloquent();
 
 $app->withFacades();
 
+$app->withAliases();
+
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
