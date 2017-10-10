@@ -64,7 +64,7 @@ class TokBox
             'data' => $data,
         ]);
 
-        return TokBoxToken::query()->create([
+        return $tokBoxSession->tokens()->create([
             'value' => $token,
             'role' => $role,
             'data' => $data,
