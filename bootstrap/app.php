@@ -44,6 +44,8 @@ $app->router->group(['namespace' => 'App\Http\Controllers'], function (Laravel\L
 
     $router->post('customer-tok-box-token/{sessionId}', 'CustomerTokBoxTokenController@store');
 
+    $router->post('tok-box-session-monitor', 'TokBoxSessionMonitorController@store');
+
 });
 
 return $app;
