@@ -11,7 +11,7 @@ class GuideTokBoxTokenController extends Controller
 {
     public function store(TokBox $tokBox, $sessionId)
     {
-        $tokBoxSession = TokBoxSession::whereValue($sessionId)->firstOrFail();
+        $tokBoxSession = TokBoxSession::query()->findOrFail($sessionId);
 
         return response()->json($tokBox->createGuideToken($tokBoxSession));
     }

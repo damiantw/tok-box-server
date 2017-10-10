@@ -39,7 +39,7 @@ class TokBox
         $session = $this->openTok->createSession(['mediaMode' => MediaMode::ROUTED]);
 
         return TokBoxSession::query()->create([
-            'tok_box_session_id' => $session->getSessionId(),
+            'value' => $session->getSessionId(),
             'name' => $sessionName,
         ]);
     }
